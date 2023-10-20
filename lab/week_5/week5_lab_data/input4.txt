@@ -1,0 +1,4 @@
+The quick brown fox jumps over the lazy dog.
+The brown fox is fast, and the dog is lazy.
+In the end, the brown fox wins the race.
+Meanwhile, the lazy dog takes a nap.

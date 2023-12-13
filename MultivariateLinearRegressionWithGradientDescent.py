@@ -2,7 +2,6 @@ from sklearn.datasets import load_diabetes
 dataset = load_diabetes()
 import pandas as pd
 df = pd.read_csv('https://raw.githubusercontent.com/Shreyas3108/house-price-prediction/master/kc_house_data.csv')
-# df.head()
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
 
@@ -26,21 +25,11 @@ class MultivariateLinearRegressionWithGradientDescent:
 
     for _ in range(self.iterations):
       y_pred = self.predict(X)
-      # print(type(X))
-      # print(self.weights.shape, self.bias.shape, X.shape, y.shape)
-      # dw = ((X.dot(self.weights) + self.bias - y)).mean() * 2
-      # db = (X.dot(self.weights) + self.bias - y).mean() * 2
 
-      # m = len(y)
       h = np.dot(X, self.weights) + self.bias
       error = h - y
       dw = (2/m) * np.dot(X.T, error)
       db = (2/m) * np.sum(error)
-      # X.T @ (X @ self.weights + self.bias - y).mean() * 2
-      # (X @ self.weights + self.bias).mean() * 2
-      # print(X.T.shape, X.shape, self.weights.shape, y.shape)
-      # dw = X.T @ (X @ self.weights + self.bias - y) / m * 2
-      # db = (X @ self.weights + self.bias) / m * 2
       self.weights -= dw * self.learning_rate
       self.bias -= db * self.learning_rate
 

@@ -2,10 +2,6 @@ from sklearn.datasets import load_diabetes
 dataset = load_diabetes()
 import pandas as pd
 df = pd.read_csv('https://raw.githubusercontent.com/Shreyas3108/house-price-prediction/master/kc_house_data.csv')
-# df.head()
-
-
-
 import numpy as np
 
 class UnivariateLinearRegression:

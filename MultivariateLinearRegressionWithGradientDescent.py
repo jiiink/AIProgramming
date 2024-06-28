@@ -26,8 +26,8 @@ class MultivariateLinearRegressionWithGradientDescent:
     for _ in range(self.iterations):
       y_pred = self.predict(X)
 
-      # h = np.dot(X, self.weights) + self.bias
-      error = y_pred - y
+      h = np.dot(X, self.weights) + self.bias
+      error = h - y
       dw = (2/m) * np.dot(X.T, error)
       db = (2/m) * np.sum(error)
       self.weights -= dw * self.learning_rate
